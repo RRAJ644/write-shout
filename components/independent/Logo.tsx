@@ -11,9 +11,7 @@ const Logo = () => {
         height={40}
         className='rounded-full shadow-md hover:shadow-lg transition-shadow'
       />
-      <span className='text-lg sm:text-xl font-bold text-black dark:text-white'>
-        Write
-      </span>
+      <span className='text-lg sm:text-xl font-bold text-black dark:text-white'></span>
     </div>
   )
 }
