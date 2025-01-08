@@ -2,8 +2,16 @@ export const MENU_ITEMS = ['Stories', 'Interest', 'Experiments', 'Thoughts']
 
 export const TITLES = {
   HEADLINE: 'Crafting stories that move hearts and ignite minds.',
-  SUB_HEADLINE:'Every script begins with a spark of inspiration and a desire to tell a story that connects with the world.',
-  RECENT_STORIES: 'Check My Recent Work'
+  SUB_HEADLINE:
+    'Every script begins with a spark of inspiration and a desire to tell a story that connects with the world.',
+  RECENT_STORIES: 'Check My Recent Work',
+  TIMELINES: {
+    TITLE: 'Journey towards writing in hope of doing great projects',
+    DESCRIPTION:
+      'Embarking on my path to becoming a screenwriter, exploring creativity, storytelling, and the art of crafting compelling narratives.',
+  },
+  CTA_TEXT: 'Transform intense moments into unforgettable stories. Let’s craft scripts that captivate and inspire.',
+  STORY_TITLE: 'What more I can write for you'
 }
 
 export const RECENT_CARDS = [
@@ -44,3 +52,5 @@ export const RECENT_CARDS = [
     description: 'This is the fourth sample description.',
   },
 ]
+
+export const ABOUT_DATA = []
