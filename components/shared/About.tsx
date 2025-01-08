@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image'
 import { Timeline } from '../ui/Timeline'
-import { TITLES } from '@/constants/constants'
 
 const About = () => {
   const data = [
