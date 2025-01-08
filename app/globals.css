@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*{
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -14,4 +14,11 @@
 
 body {
   background: var(--background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }

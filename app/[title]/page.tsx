@@ -1,6 +1,6 @@
 const Story = () => {
   return <div>
-    
+    story-title
   </div>
 }
 

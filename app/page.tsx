@@ -8,12 +8,10 @@ import StoryBoard from '@/components/shared/StoryBoard'
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <RecentStories />
       <About />
       <StoryBoard />
-      <Footer />
     </>
   )
 }
