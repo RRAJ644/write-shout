@@ -1,9 +1,7 @@
 'use client'
 
-import Hero from '@/components/shared/Hero'
-
 const page = () => {
-  return <div className='border'></div>
+  return <div className=''></div>
 }
 
 export default page
