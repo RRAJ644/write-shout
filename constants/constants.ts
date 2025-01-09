@@ -1,4 +1,7 @@
-export const MENU_ITEMS = ['Scripts', 'Services']
+export const MENU_ITEMS = {
+  LINKS: ['Scripts', 'Services'],
+  PATH: 'scripts',
+}
 
 export const TITLES = {
   HEADLINE: 'Stories That Sell, Scripts That Shine – Your Vision, My Pen!',
@@ -148,3 +151,13 @@ export const HOVERED_LINKS = {
 //   ],
 //   ITEM: 'Services',
 // },
+
+export const GENRES = [
+  'Action',
+  'Comedy',
+  'Drama',
+  'Horror',
+  'Romance',
+  'Sci-Fi',
+  'Thriller',
+]

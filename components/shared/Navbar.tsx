@@ -15,7 +15,10 @@ function Navbar({ className }: { className?: string }) {
     (type: string[]) =>
       type.map((link) => (
         <HoveredLink
-          href={`/${link.toLocaleLowerCase().split(' ').join('-')}`}
+          href={`/${MENU_ITEMS.PATH}/${link
+            .toLocaleLowerCase()
+            .split(' ')
+            .join('-')}`}
           key={link}
         >
           {link}
@@ -26,7 +29,7 @@ function Navbar({ className }: { className?: string }) {
 
   const renderMenuItems = useMemo(
     () =>
-      MENU_ITEMS?.map((item) => (
+      MENU_ITEMS?.LINKS?.map((item) => (
         <MenuItem key={item} setActive={setActive} active={active} item={item}>
           <div className='flex flex-col space-y-4 text-lg'>
             {item === HOVERED_LINKS.SCRIPTS.ITEM &&
