@@ -1,7 +1,4 @@
-export const MENU_ITEMS = {
-  LINKS: ['Scripts', 'Services'],
-  PATH: 'scripts',
-}
+export const MENU_ITEMS = ['Scripts', 'Services']
 
 export const TITLES = {
   HEADLINE: 'Stories That Sell, Scripts That Shine – Your Vision, My Pen!',

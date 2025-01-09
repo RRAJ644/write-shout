@@ -11,31 +11,35 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
   const [openMenu, setOpenMenu] = useState<boolean>(false)
 
-  const renderSubmenuItems = useCallback(
-    (type: string[]) =>
-      type.map((link) => (
-        <HoveredLink
-          href={`/${MENU_ITEMS.PATH}/${link
-            .toLocaleLowerCase()
-            .split(' ')
-            .join('-')}`}
-          key={link}
-        >
-          {link}
-        </HoveredLink>
-      )),
-    []
-  )
+  const renderSubmenuItems = (type: string[], item: string) => {
+    return type.map((link) => (
+      <HoveredLink
+        href={`/${item.toLowerCase()}/${link
+          .toLocaleLowerCase()
+          .split(' ')
+          .join('-')}`}
+        key={link}
+      >
+        {link}
+      </HoveredLink>
+    ))
+  }
 
   const renderMenuItems = useMemo(
     () =>
-      MENU_ITEMS?.LINKS?.map((item) => (
+      MENU_ITEMS?.map((item) => (
         <MenuItem key={item} setActive={setActive} active={active} item={item}>
           <div className='flex flex-col space-y-4 text-lg'>
             {item === HOVERED_LINKS.SCRIPTS.ITEM &&
-              renderSubmenuItems(HOVERED_LINKS.SCRIPTS.TYPES)}
+              renderSubmenuItems(
+                HOVERED_LINKS.SCRIPTS.TYPES,
+                HOVERED_LINKS.SCRIPTS.ITEM
+              )}
             {item === HOVERED_LINKS.SERVICES.ITEM &&
-              renderSubmenuItems(HOVERED_LINKS.SERVICES.TYPES)}
+              renderSubmenuItems(
+                HOVERED_LINKS.SERVICES.TYPES,
+                HOVERED_LINKS.SERVICES.ITEM
+              )}
           </div>
         </MenuItem>
       )),
