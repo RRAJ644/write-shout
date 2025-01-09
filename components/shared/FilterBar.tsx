@@ -19,7 +19,7 @@ const FilterBar = () => {
   }, [])
 
   return (
-    <div className='text-white border-2 border-gray-600 rounded-lg max-w-72 p-10 mt-36'>
+    <div className='h-fit z-50 text-white border-gray-600 rounded-lg border-2 w-[20rem] pl-14 p-10'>
       <GenreFilter
         genres={GENRES}
         selectedGenres={selectedGenres}

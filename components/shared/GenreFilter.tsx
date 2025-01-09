@@ -13,7 +13,7 @@ const GenreFilter = ({
   onGenreChange,
 }: GenreFilterProps) => {
   return (
-    <div className='rounded-lg shadow-lg'>
+    <div className='rounded-lg shadow-lg w-full'>
       <h2 className='text-2xl md:text-4xl font-normal mb-6'>Genres</h2>
       <ul className='space-y-4'>
         {genres?.map((genre) => (
