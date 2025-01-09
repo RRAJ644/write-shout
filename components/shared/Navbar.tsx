@@ -43,7 +43,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
       )),
-    [active, renderSubmenuItems]
+    [renderSubmenuItems]
   )
 
   const HireMeButton = (
