@@ -1,17 +1,12 @@
-
-export const metadata = {
-  title: 'Script Details',
-  description: 'Detailed information about the selected script',
-}
-
+// import '../../../../globals.css'
 export default function TitleLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <section className='text-white border-2'>
-    <h2>
-      Hello
-    </h2>
-    {children}</section>
+  return (
+    <main className='text-white border-2 border-yellow-500 flex justify-between min-h-screen mt-36 '>
+      {children}
+    </main>
+  )
 }

@@ -240,7 +240,7 @@ export const Vortex = (props: VortexProps) => {
   return (
     <div
       className={cn(
-        'relative h-full w-full overflow-hidden',
+        'relative h-fit w-full overflow-hidden',
         props.containerClassName
       )}
     >

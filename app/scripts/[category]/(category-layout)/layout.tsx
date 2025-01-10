@@ -11,7 +11,7 @@ export default function CategoryLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className='h-full flex justify-between gap-20 mt-36 py-10'>
+    <section className='min-h-screen flex justify-between gap-20 mt-36 py-10'>
       <FilterBar />
       {children}
     </section>

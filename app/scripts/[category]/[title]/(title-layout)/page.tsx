@@ -1,3 +1,5 @@
+import DataScript from '@/components/shared/DataScript'
+import InfoBar from '@/components/shared/InfoBar'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -13,9 +15,10 @@ interface PageProps {
 }
 
 export default async function TitlePage({ params }: PageProps) {
-  // const { category, title } = params
-  const paramsVal = await params
-  console.log(paramsVal, '====params')
-
-  return <></>
+  return (
+    <section className='flex justify-between gap-x-20 border-2 border-green-500 w-full'>
+      <InfoBar />
+      <DataScript />
+    </section>
+  )
 }
