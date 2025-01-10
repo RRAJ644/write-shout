@@ -1,11 +1,11 @@
 import FilterBar from '@/components/shared/FilterBar'
-import '../globals.css'
+
 export const metadata = {
-  title: 'Web Series',
+  title: 'Scripts Category',
   description: '',
 }
 
-export default function ScriptsLayout({
+export default function CategoryLayout({
   children,
 }: {
   children: React.ReactNode
