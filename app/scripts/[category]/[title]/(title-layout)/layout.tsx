@@ -9,5 +9,9 @@ export default function TitleLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <section className=''>{children}</section>
+  return <section className='text-white border-2'>
+    <h2>
+      Hello
+    </h2>
+    {children}</section>
 }

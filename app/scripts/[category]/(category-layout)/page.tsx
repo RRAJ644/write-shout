@@ -8,7 +8,7 @@ const Category = () => {
 
   const title = 'Dynamic Background Card'
 
-  // console.log(url, '==111')
+  console.log(url, '==111')
   return (
     <div
       className='w-full text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
