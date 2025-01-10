@@ -12,8 +12,10 @@ interface PageProps {
   }
 }
 
-export default function TitlePage({ params }: PageProps) {
-  const { category, title } = params
+export default async function TitlePage({ params }: PageProps) {
+  // const { category, title } = params
+  const paramsVal = await params
+  console.log(paramsVal, '====params')
 
   return <></>
 }

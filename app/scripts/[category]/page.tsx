@@ -8,9 +8,12 @@ const Category = () => {
 
   const title = 'Dynamic Background Card'
 
-  console.log(url, '==111')
+  // console.log(url, '==111')
   return (
-    <div className='w-full text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' onClick={()=>router.push(`${url}/${title}`)}>
+    <div
+      className='w-full text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+      onClick={() => router.push(`${url}/${title}`)}
+    >
       {new Array(9).fill(null).map((_, i) => (
         <ScriptCard
           key={i}
@@ -27,4 +30,3 @@ const Category = () => {
 }
 
 export default Category
-
