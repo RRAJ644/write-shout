@@ -1,6 +1,6 @@
 const DataScript = () => {
   return (
-    <div className='border-2 border-yellow-500 flex-1 h-full overflow-auto'>
+    <div className='border-2 border-yellow-500 flex-1 overflow-auto'>
       DataScript
     </div>
   )

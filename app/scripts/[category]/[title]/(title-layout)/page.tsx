@@ -18,9 +18,9 @@ export default async function TitlePage({ params }: PageProps) {
   const resolvedParams = await params
 
   return (
-    <section className='flex justify-between gap-x-20 border-2 border-green-500 w-full'>
+    <>
       <InfoBar />
       <DataScript />
-    </section>
+    </>
   )
 }
