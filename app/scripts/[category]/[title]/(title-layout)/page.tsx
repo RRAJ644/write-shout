@@ -8,13 +8,20 @@ export const metadata: Metadata = {
 }
 
 interface PageProps {
-  params: {
-    category: string
-    title: string
-  }
+  params:
+    | {
+        category: string
+        title: string
+      }
+    | Promise<{
+        category: string
+        title: string
+      }>
 }
 
 export default async function TitlePage({ params }: PageProps) {
+  const resolvedParams = await params // Resolve params if it's a Promise
+
   return (
     <section className='flex justify-between gap-x-20 border-2 border-green-500 w-full'>
       <InfoBar />
