@@ -1,5 +1,9 @@
 const DataScript = () => {
-  return <div className='border-2 border-yellow-500 flex-1'>DataScript</div>
+  return (
+    <div className='border-2 border-yellow-500 flex-1 h-full overflow-auto'>
+      DataScript
+    </div>
+  )
 }
 
 export default DataScript

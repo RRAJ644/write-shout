@@ -3,7 +3,7 @@ import InfoBar from '@/components/shared/InfoBar'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Script Details', // Optionally, dynamically set this using the title prop
+  title: 'Script Details',
   description: 'Detailed information about the selected script',
 }
 

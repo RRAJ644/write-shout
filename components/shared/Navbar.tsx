@@ -55,7 +55,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'absolute top-10 inset-x-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50',
+        'absolute top-8 inset-x-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50',
         className
       )}
     >

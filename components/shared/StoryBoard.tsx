@@ -84,8 +84,8 @@ const StoryBoard = () => {
     <>
       <Vortex
         backgroundColor='black'
-        // className='flex items-center container flex-col justify-center px-2 md:px-10 py-4 w-full h-full border-2'
-        className=''
+        className='flex items-center container flex-col justify-center px-2 md:px-10 py-4 w-full h-full mx-auto'
+        // className=''
 
       >
         <div className='w-full container mx-auto flex flex-col items-center py-10 px-4 md:px-8'>
