@@ -12,7 +12,7 @@ const RecentStories = () => {
         : '',
   }))
   return (
-    <div className='flex w-full h-full mx-auto container flex-col items-center justify-center'>
+    <div className='flex w-full mx-auto container flex-col items-center justify-center'>
       <h2 className='max-w-7xl text-lg md:text-4xl mb-4 text-black dark:text-white'>
         {TITLES?.RECENT_STORIES}
       </h2>
