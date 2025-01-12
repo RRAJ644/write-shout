@@ -18,12 +18,13 @@ interface PageProps {
 export default async function TitlePage({ params }: PageProps) {
   const resolvedParams = await params
   const tabs = extractTabs(SCRIPT_DATA)
+  const script = SCRIPT_DATA[0].script
 
   return (
-    <section className='flex gap-6 p-6 h-screen'>
+    <section className='flex gap-6 p-6 min-h-screen border-2 w-full'>
       <InfoBar tabs={tabs} />
       <div className='border-l h-full border-gray-300 border rounded-lg'></div>
-      <DataScript />
+      <DataScript script={script} />
     </section>
   )
 }

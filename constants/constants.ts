@@ -184,6 +184,7 @@ interface Script {
   writtenBy: string
   genre: string
   language: string
+  description: string
 }
 
 interface Characters {
@@ -223,6 +224,7 @@ export const SCRIPT_DATA: ScriptData[] = [
       writtenBy: 'John Doe',
       genre: 'Fantasy, Adventure',
       language: 'English',
+      description: 'A young hero embarks on a journey to save their village from an ancient curse.',
     },
 
     characters: {
@@ -279,21 +281,3 @@ export const SCRIPT_DATA: ScriptData[] = [
     },
   },
 ]
-
-function extractTabs(data: ScriptData[]): string[] {
-  const tabs: string[] = []
-
-  data.forEach((item) => {
-    Object.keys(item).forEach((key) => {
-      const section = item[key as keyof ScriptData]
-
-      if ('tab' in section) {
-        tabs.push(section.tab)
-      }
-    })
-  })
-
-  return tabs
-}
-
-export const tabs = extractTabs(SCRIPT_DATA)

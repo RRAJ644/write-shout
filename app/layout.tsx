@@ -30,9 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} dark:text-white text-black`}
       >
-        <Navbar />
-        <main className='w-full min-h-screen'>{children}</main>
-        <Footer />
+        <main className='w-full min-h-screen h-full flex flex-col justify-between'>
+          {children}
+          <Navbar />
+          <Footer />
+        </main>
       </body>
     </html>
   )

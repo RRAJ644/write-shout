@@ -4,7 +4,7 @@ interface InfoBarProps {
 
 const InfoBar = ({ tabs }: InfoBarProps) => {
   return (
-    <aside className='max-w-xs w-full rounded-lg shadow-lg p-6'>
+    <aside className='max-w-xs w-full h-fit rounded-lg shadow-lg p-6'>
       <h2 className='text-2xl font-semibold text-center mb-6'>
         Script Information
       </h2>
