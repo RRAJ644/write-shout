@@ -1,4 +1,4 @@
-export const MENU_ITEMS = ['Scripts', 'Services']
+export const MENU_ITEMS: string[] = ['Scripts', 'Services']
 
 export const TITLES = {
   HEADLINE: 'Stories That Sell, Scripts That Shine – Your Vision, My Pen!',
@@ -14,8 +14,14 @@ export const TITLES = {
     'Transform intense moments into unforgettable stories. Let’s craft scripts that captivate and inspire.',
   STORY_TITLE: 'Writing Worlds Across Every Screen',
 }
+export interface RecentCard {
+  url: string
+  name: string
+  title: string
+  description: string
+}
 
-export const RECENT_CARDS = [
+export const RECENT_CARDS: RecentCard[] = [
   {
     url: 'https://example.com',
     name: 'John Doe',
@@ -54,7 +60,7 @@ export const RECENT_CARDS = [
   },
 ]
 
-export const MAIL = 'riturajsingh.17248@gmail.com'
+export const MAIL: string = 'riturajsingh.17248@gmail.com'
 
 export const ABOUT_DATA = []
 
@@ -149,7 +155,7 @@ export const HOVERED_LINKS = {
 //   ITEM: 'Services',
 // },
 
-export const GENRES = [
+export const GENRES: string[] = [
   'Action',
   'Comedy',
   'Drama',
@@ -224,7 +230,8 @@ export const SCRIPT_DATA: ScriptData[] = [
       writtenBy: 'John Doe',
       genre: 'Fantasy, Adventure',
       language: 'English',
-      description: 'A young hero embarks on a journey to save their village from an ancient curse.',
+      description:
+        'A young hero embarks on a journey to save their village from an ancient curse.',
     },
 
     characters: {
