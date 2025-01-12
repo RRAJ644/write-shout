@@ -8,6 +8,7 @@ interface ScriptCardProps {
   overlayColor?: string
   textColor?: string
   className?: string
+  dataIndex?: number
 }
 
 const ScriptCard: React.FC<ScriptCardProps> = ({
@@ -18,25 +19,16 @@ const ScriptCard: React.FC<ScriptCardProps> = ({
   overlayColor = 'rgba(0, 0, 0, 0.5)',
   textColor = 'text-gray-50',
   className = '',
+  dataIndex,
 }) => {
   return (
-    <div className={`max-w-xs w-full ${className}`}>
+    <div className={`max-w-xs w-full ${className} card`} data-index={dataIndex}>
       <div
-        className={`group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800 transition-all duration-500`}
+        className={`group w-full cursor-pointer overflow-hidden relative h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800 transition-all duration-500`}
         style={{
           backgroundImage: `url(${defaultBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-        }}
-        onMouseEnter={(e) => {
-          ;(
-            e.currentTarget as HTMLElement
-          ).style.backgroundImage = `url(${hoverBackground})`
-        }}
-        onMouseLeave={(e) => {
-          ;(
-            e.currentTarget as HTMLElement
-          ).style.backgroundImage = `url(${defaultBackground})`
         }}
       >
         <div

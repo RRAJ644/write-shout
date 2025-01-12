@@ -19,7 +19,7 @@ const TabButton: React.FC<TabButtonProps> = ({
       }`}
     >
       <div className='absolute inset-0 animate-border bg-gradient-to-r from-gray-300 via-gray-500 to-white rounded-lg bg-[length:200%] z-[-1]' />
-      <div className='px-8 py-2 bg-black rounded-[6px] relative text-white hover:bg-transparent text-xl font-normal'>
+      <div className='px-8 py-3 bg-black rounded-lg relative text-white hover:bg-transparent text-xl font-normal hover:text-neutral-900'>
         {label}
       </div>
     </button>

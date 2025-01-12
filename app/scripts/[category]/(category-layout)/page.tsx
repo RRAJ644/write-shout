@@ -1,6 +1,6 @@
 'use client'
 import ScriptCard from '@/components/shared/ScriptCard'
-import { useParams, usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const Category = () => {
   const url = usePathname()
@@ -8,13 +8,21 @@ const Category = () => {
 
   const title = 'Dynamic Background Card'
 
-  console.log(url, '==111')
+  const handleCardClick = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    const card = event.target as HTMLElement
+    if (card.closest('.card')) {
+      router.push(`${url}/${title}`)
+    }
+  }
+
   return (
     <div
       className='w-full text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
-      onClick={() => router.push(`${url}/${title}`)}
+      onClick={handleCardClick}
     >
-      {new Array(9).fill(null).map((_, i) => (
+      {new Array(21).fill(null).map((_, i) => (
         <ScriptCard
           key={i}
           title={title}
@@ -23,6 +31,7 @@ const Category = () => {
           hoverBackground='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif'
           overlayColor='rgba(0, 0, 0, 0.6)'
           textColor='text-white'
+          data-index={i}
         />
       ))}
     </div>

@@ -1,4 +1,5 @@
 import { Tabs } from '@/components/shared/Tabs'
+import { tabs } from '@/constants/constants'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default async function TitlePage({ params }: PageProps) {
   return (
     <section className='flex flex-col gap-6 p-6 min-h-screen w-full'>
       <Tabs
-        tabs={['script', 'characters', 'plot', 'summary', 'writers']}
+        tabs={tabs}
         initialTab='script'
       >
         {tabContent}
