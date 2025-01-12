@@ -158,3 +158,142 @@ export const GENRES = [
   'Sci-Fi',
   'Thriller',
 ]
+
+interface Character {
+  name: string
+  details: string
+  motivation: string
+}
+
+interface PlotDetails {
+  introduction: string
+  risingAction: string
+  climax: string
+  fallingAction: string
+  resolution: string
+}
+
+interface Writer {
+  name: string
+  description: string
+}
+
+interface Script {
+  title: string
+  storyline: string
+  writtenBy: string
+  genre: string
+  language: string
+}
+
+interface Characters {
+  tab: string
+  characterData: Character[]
+}
+
+interface Plot {
+  tab: string
+  plotDetails: PlotDetails
+}
+
+interface Summary {
+  tab: string
+  summaryDetails: string
+}
+
+interface Writers {
+  tab: string
+  writersDetails: Writer[]
+}
+
+export interface ScriptData {
+  script: Script
+  characters: Characters
+  plot: Plot
+  summary: Summary
+  writers: Writers
+}
+
+export const SCRIPT_DATA: ScriptData[] = [
+  {
+    script: {
+      title: 'The Adventure Begins',
+      storyline:
+        'A young hero embarks on a journey to save their village from an ancient curse.',
+      writtenBy: 'John Doe',
+      genre: 'Fantasy, Adventure',
+      language: 'English',
+    },
+
+    characters: {
+      tab: 'Characters',
+      characterData: [
+        {
+          name: 'Lia',
+          details:
+            'A brave young woman with a mysterious past, determined to break the curse on her village.',
+          motivation:
+            'To save her village and uncover the truth of her destiny.',
+        },
+        {
+          name: 'Grath',
+          details:
+            'A skilled but reluctant warrior who is bound by an ancient prophecy to assist the hero.',
+          motivation:
+            'To honor the prophecy and protect his village from the curse.',
+        },
+      ],
+    },
+
+    plot: {
+      tab: 'Plot',
+      plotDetails: {
+        introduction:
+          'The village is suffering from a curse that has lasted for centuries, and the only hope lies in an ancient prophecy.',
+        risingAction:
+          'Lia discovers that she is the chosen one to break the curse, and she sets out on a perilous journey.',
+        climax:
+          'Lia and Grath confront the source of the curse, facing their deepest fears and the truth of their destinies.',
+        fallingAction:
+          'With the curse broken, the village begins to heal, and Lia comes to terms with her role as the hero.',
+        resolution:
+          'Lia returns home, knowing that her journey is only just beginning, as new threats loom on the horizon.',
+      },
+    },
+
+    summary: {
+      tab: 'Summary',
+      summaryDetails:
+        'Lia, a young woman chosen by prophecy, embarks on a perilous journey to break an ancient curse threatening her village, only to uncover deeper secrets about her own destiny.',
+    },
+
+    writers: {
+      tab: 'Writers',
+      writersDetails: [
+        {
+          name: 'John Doe',
+          description:
+            'Experienced fantasy writer with several published works in the adventure genre.',
+        },
+      ],
+    },
+  },
+]
+
+function extractTabs(data: ScriptData[]): string[] {
+  const tabs: string[] = []
+
+  data.forEach((item) => {
+    Object.keys(item).forEach((key) => {
+      const section = item[key as keyof ScriptData]
+
+      if ('tab' in section) {
+        tabs.push(section.tab)
+      }
+    })
+  })
+
+  return tabs
+}
+
+export const tabs = extractTabs(SCRIPT_DATA)
