@@ -1,19 +1,18 @@
-// InfoBar Component
 interface InfoBarProps {
   tabs: string[]
 }
 
 const InfoBar = ({ tabs }: InfoBarProps) => {
   return (
-    <aside className='max-w-xs w-full rounded-lg shadow-md p-6 border dark:bg-gray-800 dark:text-white bg-white text-black'>
-      <h2 className='text-2xl font-semibold text-center mb-4'>
+    <aside className='max-w-xs w-full rounded-lg shadow-lg p-6 border'>
+      <h2 className='text-2xl font-semibold text-center mb-6'>
         Script Information
       </h2>
-      <ul className='space-y-2'>
+      <ul className='space-y-4'>
         {tabs.map((tab) => (
           <li
             key={tab}
-            className='px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-center cursor-pointer transition-colors'
+            className='text-xl px-4 py-3 rounded-lg border border-gray-300 bg-gray-100 text-gray-800 hover:bg-gray-200 text-center cursor-pointer transition-all shadow-sm hover:shadow-md'
           >
             {tab}
           </li>
