@@ -23,7 +23,7 @@ export default async function TitlePage({ params }: PageProps) {
   return (
     <section className='flex gap-6 p-6 min-h-screen border-2 w-full'>
       <InfoBar tabs={tabs} />
-      <div className='border-l h-full border-gray-300 border rounded-lg'></div>
+      <div className='border-l h-full border-neutral-300 border rounded-lg'></div>
       <DataScript script={script} />
     </section>
   )
