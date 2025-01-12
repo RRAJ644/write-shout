@@ -4,7 +4,7 @@ interface InfoBarProps {
 
 const InfoBar = ({ tabs }: InfoBarProps) => {
   return (
-    <aside className='max-w-xs w-full rounded-lg shadow-lg p-6 border'>
+    <aside className='max-w-xs w-full rounded-lg shadow-lg p-6'>
       <h2 className='text-2xl font-semibold text-center mb-6'>
         Script Information
       </h2>
@@ -12,7 +12,7 @@ const InfoBar = ({ tabs }: InfoBarProps) => {
         {tabs.map((tab) => (
           <li
             key={tab}
-            className='text-xl px-4 py-3 rounded-lg border border-gray-300 bg-gray-100 text-gray-800 hover:bg-gray-200 text-center cursor-pointer transition-all shadow-sm hover:shadow-md'
+            className='text-xl px-4 py-3 rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 text-center cursor-pointer transition-all shadow-sm hover:shadow-md'
           >
             {tab}
           </li>
