@@ -1,5 +1,3 @@
-import React from 'react'
-
 type CheckboxItemProps = {
   id: string
   label: string
