@@ -18,21 +18,38 @@ export default async function TitlePage({ params }: PageProps) {
   const resolvedParams = await params
 
   const tabContent = {
-    script: <div>Details about the script.</div>,
-    characters: <div>Information about characters.</div>,
-    plot: <div>Plot description goes here.</div>,
-    summary: <div>Summary of the script.</div>,
-    writers: <div>Details about the writers.</div>,
+    Script: <div>Details about the script.</div>,
+    Characters: <div>Information about characters.</div>,
+    Plot: <div>Plot description goes here.</div>,
+    Summary: <div>Summary of the script.</div>,
+    Writers: <div>Details about the writers.</div>,
   }
 
   return (
     <section className='flex flex-col gap-6 p-6 min-h-screen w-full'>
-      <Tabs
-        tabs={tabs}
-        initialTab='script'
-      >
+      <Tabs tabs={tabs} initialTab='Script'>
         {tabContent}
       </Tabs>
     </section>
   )
 }
+
+// const scripts = [
+
+//   {
+//     metaData: {
+//       title: ''
+//       description: ''
+//       defaultBackground: ''
+//       hoverBackground: ''
+//     },
+//     mainData:{
+//       script: ''
+//       characters : ''
+//       plot: ''
+//       summary:''
+//       writers: ''
+//     }
+//   },
+
+// ]

@@ -289,4 +289,10 @@ export const SCRIPT_DATA: ScriptData[] = [
   },
 ]
 
-export const tabs: string[] = ['Script', 'Characters', 'Plot', 'Summary', 'Writers']
+export const tabs: string[] = [
+  'Script',
+  'Characters',
+  'Plot',
+  'Summary',
+  'Writers',
+]
