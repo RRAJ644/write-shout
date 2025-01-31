@@ -29,7 +29,7 @@ function Navbar({ className }: { className?: string }) {
     () =>
       MENU_ITEMS?.map((item) => (
         <MenuItem key={item} setActive={setActive} active={active} item={item}>
-          <div className='flex flex-col space-y-4 text-lg'>
+          <div className='flex flex-col space-y-4 text-base lg:text-lg'>
             {item === HOVERED_LINKS.SCRIPTS.ITEM &&
               renderSubmenuItems(
                 HOVERED_LINKS.SCRIPTS.TYPES,
@@ -47,7 +47,7 @@ function Navbar({ className }: { className?: string }) {
   )
 
   const HireMeButton = (
-    <button className='px-4 py-2 rounded-md border border-black bg-white text-black text-lg hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 w-max'>
+    <button className='px-4 py-2 rounded-md border border-black bg-white text-black text-base lg:text-lg hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200 w-max'>
       Hire Me!
     </button>
   )
@@ -80,7 +80,7 @@ function Navbar({ className }: { className?: string }) {
       </Menu>
 
       {openMenu && (
-        <div className='md:hidden flex space-x-3 h-full items-center justify-center rounded-[1rem] absolute top-20 inset-x-4 border border-transparent dark:bg-black dark:border-white/[0.2] bg-white'>
+        <div className='md:hidden flex space-x-3 h-full items-center justify-center rounded-[1rem] absolute top-16 md:top-20 inset-x-4 border border-transparent dark:bg-black dark:border-white/[0.2] bg-white'>
           {renderMenuItems}
           {HireMeButton}
         </div>

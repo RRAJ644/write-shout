@@ -30,8 +30,8 @@ const Footer = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div className='flex flex-col max-lg:items-center'>
-            <h2 className='text-lg font-semibold mb-4'>About Me</h2>
-            <p className='text-sm text-gray-400 leading-relaxed max-lg:max-w-sm max-lg:text-center'>
+            <h2 className='text-xl font-semibold mb-4'>About Me</h2>
+            <p className='text-sm md:text-base text-gray-400 leading-relaxed max-lg:max-w-sm max-lg:text-center'>
               I'm a passionate screenwriter who crafts stories that resonate
               across screens—whether for film, TV, or digital media. Let’s
               collaborate to create captivating narratives.
@@ -48,13 +48,13 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col items-center'>
-            <h2 className='text-lg font-semibold mb-4'>Quick Links</h2>
-            <ul className='space-y-3'>
+            <h2 className='text-lg xl:text-xl font-semibold mb-4'>Quick Links</h2>
+            <ul className='space-y-3 '>
               {['Portfolio', 'Contact', 'Services'].map((link) => (
                 <li key={link}>
                   <Link
                     href={`/${link.toLocaleLowerCase()}`}
-                    className='text-sm text-gray-400 hover:text-gray-200'
+                    className='text-sm md:text-base text-gray-400 hover:text-gray-200'
                   >
                     {link}
                   </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col max-lg:items-center'>
-            <h2 className='text-lg font-semibold mb-4'>Connect with Me</h2>
+            <h2 className='text-lg xl:text-xl font-semibold mb-4'>Connect with Me</h2>
             <div className='flex space-x-4 items-center'>
               {socialLinks.map(({ href, label, icon }) => (
                 <a
@@ -73,7 +73,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label={`Visit my ${label}`}
-                  className='text-gray-400 hover:text-gray-200 text-xl'
+                  className='text-gray-400 hover:text-gray-200 text-xl md:text-3xl'
                 >
                   {icon}
                 </a>

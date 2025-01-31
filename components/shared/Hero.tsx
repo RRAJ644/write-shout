@@ -6,16 +6,24 @@ import { TypewriterEffectSmooth } from '../ui/typewriter-effect'
 import Button from '../independent/Button'
 
 const Hero = () => {
-  const words = useMemo(() => {
-    const headlineWords = TITLES?.HEADLINE?.split(' ') || []
-    return headlineWords.map((word, index) => ({
+  // const words = useMemo(() => {
+  //   const headlineWords = TITLES?.HEADLINE?.split(' ') || []
+  //   return headlineWords.map((word, index) => ({
+  //     text: word,
+  //     className:
+  //       index === headlineWords.length - 1
+  //         ? 'text-neutral-100 dark:text-neutral-100'
+  //         : '',
+  //   }))
+  // }, [TITLES?.HEADLINE])
+  
+  const words = useMemo(() => 
+    (TITLES?.HEADLINE?.split(' ') || []).map((word, index, arr) => ({
       text: word,
-      className:
-        index === headlineWords.length - 1
-          ? 'text-neutral-100 dark:text-neutral-100'
-          : '',
-    }))
-  }, [TITLES?.HEADLINE])
+      className: index === arr.length - 1 ? 'text-neutral-100 dark:text-neutral-100' : '',
+    })), 
+  [TITLES?.HEADLINE])
+  
 
   return (
     <div className='w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center overflow-hidden'>
@@ -28,11 +36,11 @@ const Hero = () => {
         />
         <TypewriterEffectSmooth words={words} />
 
-        <p className='mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto'>
+        <p className='mt-8 lg:mt-6 font-normal text-sm md:text-base lg:text-lg text-neutral-300 px-6 md:max-w-lg lg:max-w-xl text-center mx-auto'>
           {TITLES?.SUB_HEADLINE}
         </p>
 
-        <div className='space-x-10 my-8'>
+        <div className='space-x-10 max-sm:space-x-6 my-8'>
           <Button title='Connect With Me!' />
           <Button title='Read Me More!' />
         </div>

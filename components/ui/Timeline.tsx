@@ -38,8 +38,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className='w-full bg-white overflow-hidden dark:bg-neutral-950 font-sans md:px-10'
       ref={containerRef}
     >
-      <div className='w-full container mx-auto flex flex-col items-center py-10 px-4 md:px-8'>
-        <h2 className='max-w-7xl text-lg md:text-4xl mb-4 text-black dark:text-white'>
+      <div className='w-full container mx-auto flex flex-col items-center py-10 mt-16 px-10 md:px-8'>
+        <h2 className='max-w-7xl text-lg md:text-4xl mb-4 text-black dark:text-white text-center'>
           {TITLES?.TIMELINES?.TITLE}
         </h2>
 
@@ -52,7 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className='flex justify-start pt-10 md:pt-40 md:gap-10'
+            className='flex justify-start pt-10 md:pt-16 md:gap-10'
           >
             <div className='sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full'>
               <div className='h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center'>

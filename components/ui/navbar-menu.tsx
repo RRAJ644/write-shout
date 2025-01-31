@@ -28,7 +28,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className='relative'>
       <motion.p
         transition={{ duration: 0.3 }}
-        className='cursor-pointer text-black hover:opacity-[0.9] dark:text-white w-max font-normal text-xl'
+        className='cursor-pointer text-black hover:opacity-[0.9] dark:text-white w-max font-normal text-base lg:text-xl'
       >
         {item}
       </motion.p>
@@ -70,7 +70,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className='relative rounded-[1.2rem] border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center px-8 py-4 space-x-10'
+      className='relative rounded-[1.2rem] border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center px-4 lg:px-6 py-2 md:py-4 space-x-10'
     >
       {children}
     </nav>
@@ -98,7 +98,7 @@ export const ProductItem = ({
         className='flex-shrink-0 rounded-md shadow-2xl'
       />
       <div>
-        <h4 className='text-xl font-bold mb-1 text-black dark:text-white'>
+        <h4 className='text-base lg:text-xl font-bold mb-1 text-black dark:text-white'>
           {title}
         </h4>
         <p className='text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300'>
@@ -113,7 +113,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className='text-neutral-700 dark:text-neutral-200 hover:text-white '
+      className='text-neutral-700 dark:text-neutral-200 hover:text-white w-full'
     >
       {children}
     </Link>

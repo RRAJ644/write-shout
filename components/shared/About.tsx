@@ -8,10 +8,10 @@ const About = () => {
       title: '2024',
       content: (
         <div>
-          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm xl:text-base font-normal mb-8'>
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
-          <div className='grid grid-cols-2 gap-4'>
+          <div className='grid grid-cols-2 gap-4 max-w-6xl'>
             <Image
               src='https://assets.aceternity.com/templates/startup-1.webp'
               alt='startup template'
